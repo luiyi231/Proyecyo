@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="proyectoIIIç.Calculadora"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:proyectoIIIç"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#1E1E1E">
+        <!-- Fondo general oscuro -->
+        <Grid x:Name="GridCalculadora" Width="350" Background="#2C2C2C" Height="500">
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Style.Resources>
+                        <!-- Estilo para los botones -->
+                        <Style TargetType="Button">
+                            <Setter Property="Width" Value="50"/>
+                            <Setter Property="Height" Value="50"/>
+                            <Setter Property="Background" Value="#444444" />
+                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="FontSize" Value="14" />
+                            <Setter Property="Padding" Value="10" />
+                            <Setter Property="Margin" Value="5" />
+                            <Setter Property="BorderBrush" Value="Black"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Style>
+                        <!-- Estilo para el TextBox -->
+                        <Style TargetType="TextBox">
+                            <Setter Property="Width" Value="320"/>
+                            <Setter Property="Height" Value="50"/>
+                            <Setter Property="FontSize" Value="24"/>
+                            <Setter Property="Margin" Value="0,30,0,10"/>
+                            <Setter Property="TextAlignment" Value="Center"/>
+                            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                            <Setter Property="Background" Value="#333333"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Setter Property="BorderBrush" Value="#444444"/>
+                            <Setter Property="BorderThickness" Value="2"/>
+                        </Style>
+                    </Style.Resources>
+                </Style>
+            </Grid.Style>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="ColaInput" Grid.Row="0" Grid.ColumnSpan="5" Width="320" Height="50" Margin="0,30,0,10"/>
+
+            <!-- Fila 1 de botones -->
+            <Button x:Name="btn_7" Content="7" Grid.Row="1" Grid.Column="0"/>
+            <Button x:Name="btn_8" Content="8" Grid.Row="1" Grid.Column="1"/>
+            <Button x:Name="btn_9" Content="9" Grid.Row="1" Grid.Column="2"/>
+            <Button x:Name="btn_div" Content="/" Grid.Row="1" Grid.Column="3"/>
+
+            <!-- Fila 2 de botones -->
+            <Button x:Name="btn_4" Content="4" Grid.Row="2" Grid.Column="0"/>
+            <Button x:Name="btn_5" Content="5" Grid.Row="2" Grid.Column="1"/>
+            <Button x:Name="btn_6" Content="6" Grid.Row="2" Grid.Column="2"/>
+            <Button x:Name="btn_mul" Content="*" Grid.Row="2" Grid.Column="3"/>
+
+            <!-- Fila 3 de botones -->
+            <Button x:Name="btn_1" Content="1" Grid.Row="3" Grid.Column="0"/>
+            <Button x:Name="btn_2" Content="2" Grid.Row="3" Grid.Column="1"/>
+            <Button x:Name="btn_3" Content="3" Grid.Row="3" Grid.Column="2"/>
+            <Button x:Name="btn_res" Content="-" Grid.Row="3" Grid.Column="3"/>
+
+            <!-- Fila 4 de botones -->
+            <Button x:Name="btn_0" Content="0" Grid.Row="4" Grid.Column="0"/>
+            <Button x:Name="btn_parentesisAbre" Content="(" Grid.Row="4" Grid.Column="1"/>
+            <Button x:Name="btn_parentesisCiere" Content=")" Grid.Row="4" Grid.Column="2"/>
+            <Button x:Name="btn_sum" Content="+" Grid.Row="4" Grid.Column="3"/>
+
+            <!-- Fila 5 de botones -->
+            <Button x:Name="btn_borrar" Content="Borrar" Grid.Row="5" Grid.ColumnSpan="2" Width="100" Margin="19,5,56,5"/>
+            <Button x:Name="btn_resultado" Content="=" Grid.Row="5" Grid.Column="4"/>
+
+            <!-- Fila 6 de botones -->
+            <Button x:Name="btn_limpiar" Content="Limpiar" Grid.Row="5" Grid.ColumnSpan="2" Width="100" Grid.Column="1" Margin="56,5,18,5"/>
+        </Grid>
+    </Grid>
+</UserControl>
