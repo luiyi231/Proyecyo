@@ -43,5 +43,15 @@ namespace proyectoIIIç
         {
             Contenido.Content = new Calculadora();
         }
+
+        private void BtnArbol_Click(object sender, RoutedEventArgs e)
+        {
+            Contenido.Content = new Arboles();
+        }
+
+        private void BtnRecursividad_Click(object sender, RoutedEventArgs e)
+        {
+            Contenido.Content = new Recursividad();
+        }
     }
 }

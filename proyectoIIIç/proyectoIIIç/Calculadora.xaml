@@ -83,11 +83,11 @@
             <Button x:Name="btn_sum" Content="+" Grid.Row="4" Grid.Column="3"/>
 
             <!-- Fila 5 de botones -->
-            <Button x:Name="btn_borrar" Content="Borrar" Grid.Row="5" Grid.ColumnSpan="2" Width="100" Margin="19,5,56,5"/>
+            <Button x:Name="btn_borrar" Content="Borrar" Grid.Row="5" Grid.ColumnSpan="3" Width="NaN" Margin="19,5,18,5"/>
             <Button x:Name="btn_resultado" Content="=" Grid.Row="5" Grid.Column="4"/>
 
             <!-- Fila 6 de botones -->
-            <Button x:Name="btn_limpiar" Content="Limpiar" Grid.Row="5" Grid.ColumnSpan="2" Width="100" Grid.Column="1" Margin="56,5,18,5"/>
+            <Button x:Name="btn_limpiar" Content="Limpiar" Grid.Row="6" Grid.ColumnSpan="2" Width="100" Margin="19,0,56,-50"/>
         </Grid>
     </Grid>
 </UserControl>

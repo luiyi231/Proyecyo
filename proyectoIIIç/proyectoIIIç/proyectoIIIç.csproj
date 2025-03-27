@@ -68,11 +68,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Busqueda.xaml.cs">
+      <DependentUpon>Busqueda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Grafos.xaml.cs">
+      <DependentUpon>Grafos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Recursividad.xaml.cs">
+      <DependentUpon>Recursividad.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Arboles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Busqueda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Calculadora.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Colas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Grafos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -87,6 +108,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Arboles.xaml.cs">
+      <DependentUpon>Arboles.xaml</DependentUpon>
     </Compile>
     <Compile Include="Calculadora.xaml.cs">
       <DependentUpon>Calculadora.xaml</DependentUpon>
@@ -106,6 +130,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PilasColasControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Recursividad.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

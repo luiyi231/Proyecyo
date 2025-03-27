@@ -9,23 +9,23 @@
     <Grid Margin="10" Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Fila para el ingreso de datos y botón Agregar -->
+            <!-- Para la sección de ingreso de datos -->
             <RowDefinition Height="Auto"/>
-            <!-- Fila para el DataGrid -->
+            <!-- DataGrid -->
             <RowDefinition Height="Auto"/>
-            <!-- Fila para ComboBox y RadioButtons -->
+            <!-- Panel de ordenamiento -->
             <RowDefinition Height="Auto"/>
-            <!-- Fila para botón Ordenar -->
+            <!-- Panel de búsqueda -->
             <RowDefinition Height="*"/>
-            <!-- Fila final expandible si se requiere -->
+            <!-- Resto, si se requiere -->
         </Grid.RowDefinitions>
 
         <!-- 1) Ingreso de datos y botón AGREGAR -->
         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
             <Label Content="Números:" VerticalAlignment="Center"/>
-            <TextBox x:Name="txtNumeros" Width="250" Margin="5,0,0,0"
+            <TextBox x:Name="txtNumeros" Width="280" Margin="5,0,0,0"
                      ToolTip="Ingresa números separados por comas o espacios (ej: 10, 3, 5)"/>
-            <Button x:Name="btnAgregar" Content="Agregar" Width="60"
+            <Button x:Name="btnAgregar" Content="Agregar" Width="80"
                     Click="btnAgregar_Click" Margin="5,0,0,0"/>
         </StackPanel>
 
@@ -37,30 +37,66 @@
             </DataGrid.Columns>
         </DataGrid>
 
-        <!-- 3) ComboBox (métodos) y RadioButtons (orden) -->
-        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="0,0,0,10">
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                <Label Content="Método:" VerticalAlignment="Center"/>
-                <ComboBox x:Name="cmbMetodos" Width="150" Margin="5,0,0,0">
-                    <ComboBoxItem Content="BubbleSort"/>
-                    <ComboBoxItem Content="InsertionSort"/>
-                    <ComboBoxItem Content="SelectionSort"/>
-                    <ComboBoxItem Content="QuickSort"/>
-                    <ComboBoxItem Content="MergeSort"/>
-                </ComboBox>
-            </StackPanel>
+        <!-- 3) SECCIÓN DE ORDENAMIENTO (ComboBox + RadioButtons + Botón) -->
+        <GroupBox Grid.Row="2" Header="Ordenamiento" Padding="10" Margin="0,0,0,10">
+            <StackPanel Orientation="Vertical">
 
-            <GroupBox Header="Orden" Margin="0,5,0,0" Padding="5">
-                <StackPanel Orientation="Horizontal">
+                <!-- ComboBox para métodos de ordenamiento -->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Label Content="Método:" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="cmbMetodosOrdenamiento" Width="180" Margin="5,0,0,0">
+                        <ComboBoxItem Content="Selección"/>
+                        <ComboBoxItem Content="Inserción"/>
+                        <ComboBoxItem Content="Burbuja"/>
+                        <ComboBoxItem Content="QuickSort"/>
+                        <ComboBoxItem Content="MergeSort"/>
+                        <ComboBoxItem Content="RadixSort"/>
+                        <ComboBoxItem Content="BucketSort"/>
+                        <ComboBoxItem Content="ShellSort"/>
+                        <ComboBoxItem Content="HeapSort"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <!-- RadioButtons para Asc/Desc -->
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                     <RadioButton x:Name="rdbAsc" Content="Ascendente" IsChecked="True" Margin="5"/>
                     <RadioButton x:Name="rdbDesc" Content="Descendente" Margin="5"/>
                 </StackPanel>
-            </GroupBox>
-        </StackPanel>
 
-        <!-- 4) Botón para Ordenar -->
-        <Button x:Name="btnOrdenar" Grid.Row="3" Content="Ordenar" Width="80" 
-                Click="btnOrdenar_Click" HorizontalAlignment="Left"/>
-        <Button Content="Limpiar" Grid.Row="3" Width="80" HorizontalAlignment="Left" Margin="100,0,0,0" Click="Button_Click"/>
+                <!-- Botón para ordenar -->
+                <Button x:Name="btnOrdenar" Content="Ordenar" Width="80" 
+                        Click="btnOrdenar_Click"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- 4) SECCIÓN DE BÚSQUEDA (ComboBox + TextBox + Botón + TextBox resultado) -->
+        <GroupBox Grid.Row="3" Header="Búsqueda" Padding="10">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Label Content="Método:" VerticalAlignment="Center"/>
+                    <ComboBox x:Name="cmbMetodosBusqueda" Width="180" Margin="5,0,0,0">
+                        <ComboBoxItem Content="Secuencial"/>
+                        <ComboBoxItem Content="Binaria"/>
+                        <ComboBoxItem Content="Has"/>
+                        <ComboBoxItem Content="Lineal"/>
+                        <ComboBoxItem Content="Indexada"/>
+                    </ComboBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Label Content="Elemento:" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtElementoBuscar" Width="100" Margin="5,0,0,0"/>
+                    <Button x:Name="btnBuscar" Content="Buscar" Width="80" Margin="10,0,0,0"
+                            Click="btnBuscar_Click"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Resultado:" VerticalAlignment="Center"/>
+                    <TextBox x:Name="txtResultadoBusqueda" Width="250" Margin="5,0,0,0" 
+                             IsReadOnly="True"/>
+                </StackPanel>
+
+            </StackPanel>
+        </GroupBox>
     </Grid>
 </UserControl>

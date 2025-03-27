@@ -5,18 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:proyectoIIIç"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="550" Width="1050">
     <Grid>
-        <!-- Definimos las filas y columnas -->
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <!-- Para el menú -->
+
             <RowDefinition Height="*"/>
-            <!-- Para el contenido principal -->
+            
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
-            <!-- Panel lateral -->
+            
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Row="1" Grid.Column="0" Background="LightGray">
@@ -24,6 +23,9 @@
             <Button Content="Listas Enlazadas" Height="40" Margin="10" Click="BtnListas_Click"/>
             <Button Content="Métodos de Ordenamiento" Height="40" Margin="10" Click="BtnOrdenamiento_Click"/>
             <Button Content="Calculadora - Pila" Height="40" Margin="10" x:Name="BtnCalculadora" Click="BtnCalculadora_Click"/>
+            <Button Content="Arbol Binario" Height="40" Margin="10" x:Name="BtnArbol" Click="BtnArbol_Click"/>
+            
+            <Button Content="Recursividad" Height="40" Margin="10" x:Name="BtnRecursividad" Click="BtnRecursividad_Click"/>
         </StackPanel>
 
         <ContentControl Grid.Row="1" Grid.Column="1" x:Name="Contenido"/>
